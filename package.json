@@ -1,0 +1,33 @@
+{
+  "name": "socket",
+  "version": "0.0.0",
+  "description": "websocket like library using webrtc data channel.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bredele/socket.git"
+  },
+  "keywords": [
+    "webrtc",
+    "socket",
+    "chat",
+    "channel",
+    "datachannel"
+  ],
+  "author": "Olivier Wietrich <olivier.wietrich@gmail.com> (http://github.com/bredele)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/socket/issues"
+  },
+  "homepage": "https://github.com/bredele/socket",
+  "devDependencies": {
+    "mocha": "^1.18.2"
+  }
+}

@@ -6,9 +6,12 @@
   "keywords": [],
   "dependencies": {
     "bredele/peer": "*",
-    "bredele/channel": "*",   
+    "bredele/channel": "*",
+    "component/emitter": "^1.1.2"
   },
   "development": {
+    "bredele/connect": "*",
+    "component/assert": "*"
   },
   "license": "MIT",
   "main": "index.js",
