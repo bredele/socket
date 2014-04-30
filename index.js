@@ -7,7 +7,6 @@
 var peer = require('peer');
 var channel = require('channel');
 var Emitter = require('component-emitter');
-var emit = Emitter.prototype.emit;
 
 
 /**
@@ -37,11 +36,12 @@ function Socket(peer) {
   this.peer = peer;
   peer.on('message', function(ev) {
     ev = JSON.parse(ev);
-    emit.apply(_this, [ev.topic].concat(ev.body));
+    peer.emit.apply(_this, [ev.topic].concat(ev.body));
   });
   peer.on('channel open', function() {
     // should do that in channel
     peer.on('channel emit', function(topic, body) {
+
       peer.send({
         topic: topic,
         body: body

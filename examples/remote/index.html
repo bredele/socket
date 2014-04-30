@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>remote channel</title>
+</head>
+<body>
+	<video class="skype"></video>
+	<video class="remote"></video>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/app/build.js"></script>
+	<script>
+	  var socket = require('socket');
+	  var signal = require('signal');
+
+	  var chat = socket.connect('hello')
+	  chat.use(signal('room'));
+
+	  chat.on('msg', console.log);
+	  chat.emit('msg', 'hello world');
+	  // setInterval(function() {
+	  // 	chat.emit('msg', 'hello world');
+	  // }, 1000);
+	</script>
+</body>
+</html>
