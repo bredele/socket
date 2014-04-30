@@ -16,11 +16,12 @@
 	  var chat = socket.connect('hello')
 	  chat.use(signal('room'));
 
-	  chat.on('msg', console.log);
-	  chat.emit('msg', 'hello world');
-	  // setInterval(function() {
-	  // 	chat.emit('msg', 'hello world');
-	  // }, 1000);
+	  chat.on('msg', function(msg) {
+	  	console.log(msg);
+	  });
+	  setInterval(function() {
+	  	chat.emit('msg', Math.random().toString(36).substring(7));
+	  }, 1000);
 	</script>
 </body>
 </html>
